@@ -1,0 +1,96 @@
+/* Global styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("Background.png");
+  }
+
+  /* Main section styles */
+
+  .main {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-top: 0;
+  }
+
+  /* Image styles */
+
+  .image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #image-preview {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Form styles */
+
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .latitude_div,
+  .longitude_div {
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+  /* Responsive styles */
+
+  @media screen and (max-width: 600px) {
+    .latitude_div,
+    .longitude_div {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }

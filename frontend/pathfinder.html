@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AT-INS Pathfinder</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="pathfinder.css">
+</head>
+<body>
+	<div class="main">
+		<h1>AT-INS Pathfinder</h1>
+		<div class="menu">
+			<div class="latitude_div">
+				<label id="latitude_label">Latitude</label><br>
+				<input type="text" id="lat" placeholder="Enter latitude">
+			</div>
+			<div class="longitude_div">
+				<label id="longitude_label">Longitude</label><br>
+				<input type="text" id="lon" placeholder="Enter longitude">
+			</div>
+			<div class="submit">
+				<button onclick="downloadAndDisplayImage()">Download and display path</button>
+			</div>
+		</div>
+		<div class="image">
+			<img id="image-preview" src="" />
+    	</div>
+	</div>
+	<br><br>
+
+	<script>
+		async function downloadAndDisplayImage() {
+			// Get the image URL input by the user
+			var imageUrl = document.getElementById("lon").value;
+
+			// Create a new image object
+			var image = new Image();
+
+			// Set the image source to the URL entered by the user
+			image.src = imageUrl;
+
+			// Wait for the image to load
+			image.onload = function() {
+				// Get the image preview element
+				var imagePreview = document.getElementById("image-preview");
+
+				// Set the image preview source to the downloaded image
+				imagePreview.src = image.src;
+			};
+		}
+	</script>
+
+</body>
+</html>
