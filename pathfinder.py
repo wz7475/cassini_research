@@ -55,18 +55,19 @@ class Pathfinder:
         cost_so_far = {}
         came_from[start] = None
         cost_so_far[start] = 0
+        cost_so_far[end] = float("inf")
         
         while not queue.empty():
             current = queue.get()
             
-            if current == end:
-                break
+            if cost_so_far.get(current, 0) > cost_so_far[end]:
+                continue
             
             for next in self.get_neighbors(current):
                 x, y = next
                 filters = self.graph[y][x]
-                new_cost = cost_so_far[current] + cost(agent, filters)
-                if next not in cost_so_far or new_cost < cost_so_far[next]:
+                new_cost = cost_so_far[current] + cost(agent, filters) + 0.01
+                if new_cost < cost_so_far.get(next, float("inf")) and new_cost < cost_so_far[end]:
                     cost_so_far[next] = new_cost
                     priority = new_cost + self.remaining_manhattan_loss(next, end)
                     queue.put(next, priority)
