@@ -3,7 +3,7 @@
 <head>
 	<title>AT-INS Pathfinder</title>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="pathfinder.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div class="main">
@@ -17,6 +17,10 @@
 				<label id="longitude_label">Longitude</label><br>
 				<input type="text" id="lon" placeholder="Enter longitude">
 			</div>
+			<div class="type_vehicle_type">
+				<label id="vehicle_type_label">Vehicle Type</label><br>
+				<input type="text" id="lon" placeholder="Enter vehicle name">
+			</div>
 			<div class="submit">
 				<button onclick="downloadAndDisplayImage()">Download and display path</button>
 			</div>
@@ -29,7 +33,8 @@
 
 	<script>
 		async function downloadAndDisplayImage() {
-			// Get the image URL input by the user
+			// Get values
+			var lat = document.getElementById("lat").value;
 			var imageUrl = document.getElementById("lon").value;
 
 			// Create a new image object
