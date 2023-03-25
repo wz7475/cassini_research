@@ -22,7 +22,7 @@ class Agent:
 
 
 def cost(agent, filters):
-    return filters[0]
+    return filters[0] + filters[1]
 
 # loss travelled + loss remaining to dist (manhattan)
 class Pathfinder:
@@ -101,22 +101,3 @@ class Pathfinder:
 
     def add_used_path(self):
         pass
-
-
-graph = []
-for y in range(10):
-    row = []
-    for x in range(10):
-        row.append((1,))
-    graph.append(row)
-
-agent = Agent(False, 0)
-
-pathfinder = Pathfinder(graph)
-
-start = (1, 1)
-end = (4, 5)
-
-path = pathfinder.find_ponnection(start, end, agent)
-for p in path:
-    print(p)
