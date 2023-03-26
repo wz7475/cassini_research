@@ -4,3 +4,4 @@ nc_files
 .idea
 .vscode
 imgs
+__pycache__
