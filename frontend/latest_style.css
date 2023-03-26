@@ -1,0 +1,143 @@
+/* Global styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("Background.png");
+    }
+
+    /* Main section styles */
+
+    .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(242, 242, 242, 0.75);
+    height: 1000px;
+  }
+
+    h1 {
+    font-size: 48px;
+    margin-top: 0;
+    }
+
+    /* Image styles */
+
+    .image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+
+    #image-preview {
+    max-width: 100%;
+    height: auto;
+    }
+
+    /* Form styles */
+
+    .menu {
+    display: flex;
+    justify-content: center;
+    }
+
+    .startpoint_div,
+    .endpoint_div{
+    margin-right: 20px;
+    text-align: center;
+    background-color: rgba(235, 232, 235, 0.9);
+    width: 250px;
+    }
+
+    .type_vehicle_type_div{
+        float: right;
+        text-align: center;
+        background-color: rgba(235, 232, 235, 0.9);
+        width: 250px;
+    }
+
+    /*Startpoint divs*/
+    .latitude_a_div,
+    .latitude_b_div{
+        float: left;
+        margin-left: 10px;
+        text-align: center;
+        /*background-color: rebeccapurple;*/
+        width: 230px;
+    }
+    .longitude_a_div,
+    .longitude_b_div{
+        float: left;
+        margin-left: 10px;
+        text-align: center;
+        /*background-color: rebeccapurple;*/
+        width: 230px;
+    }
+
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+
+    .vehicle_type{
+        width: 200px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .lat_a,
+    .lon_a,
+    .lat_b,
+    .lon_b{
+        width: 175px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    button {
+    padding: 80px 80px;
+    background-color: #3e8e41;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 20px;
+    font-size: 25px;
+    }
+
+    button:hover {
+    background-color:  #72d375;
+    }
+
+    /* Responsive styles */
+
+    @media screen and (max-width: 800px) {
+    .latitude_div,
+    .choose_type_div,
+    .longitude_div {
+    margin-right: 0;
+    margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    select {
+    width: 100%;
+    }
+
+    button {
+    width: 100%;
+    }
+    }
+
+
+
+

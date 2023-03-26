@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AT-INS Pathfinder</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="latest_style.css">
+</head>
+<body>
+	<div class="main">
+		<h1>AT-INS Pathfinder</h1>
+		<div class="menu">
+			<div class="startpoint_div">
+                <h2>Startpoint</h2>
+                <div class="latitude_a_div">
+                    <input class="lat_a" type="text" id="lat_a" placeholder="Enter latitude">
+                </div>
+                <div class="longitude_a_div">
+                    <input class="lon_a" type="text" id="lon_a" placeholder="Enter longitude">
+                </div>
+            </div>
+            <div class="endpoint_div">
+                <h2>Endpoint</h2>
+                <div class="latitude_b_div">
+                    <input class="lat_b" type="text" id="lat_b" placeholder="Enter latitude">
+                </div>
+                <div class="longitude_b_div">
+                    <input class="lon_b" type="text" id="lon_b" placeholder="Enter longitude">
+                </div>
+            </div>
+            <div class="type_vehicle_type_div">
+                <h2>Vehicle Type</h2>
+                <input class="vehicle_type" type="text" id="vehicle_type" placeholder="Enter vehicle name">
+            </div>
+            <div class="submit">
+                <button onclick="downloadAndDisplayImage()">Create path</button>
+            </div>
+		</div>
+		<div class="image">
+			<img id="image-preview" src="" />
+    	</div>
+	</div>
+	<br><br>
+
+	<script>
+		async function downloadAndDisplayImage() {
+			// Get values
+            /*
+			var lat = document.getElementById("lat").value;
+			var lot = document.getElementById("lon").value;
+			var vehicle_type = document.getElementById("vehicle_type").value;
+            */
+			// Get url
+			var imageUrl = document.getElementById("vehicle_type").value;
+
+			// Create a new image object
+			var image = new Image();
+
+			// Set the image source to the URL entered by the user
+			image.src = "TestImage.png"
+
+			function resizeImg(img, height, width){
+				img.height = height;
+				img.width = width;
+			}
+			resizeImg(image, 800, 800);
+
+			// Wait for the image to load
+			image.onload = function() {
+				// Get the image preview element
+				var imagePreview = document.getElementById("image-preview");
+				imagePreview.height = 1000;
+				imagePreview.width = 500;
+
+				// Set the image preview source to the downloaded image
+				imagePreview.src = image.src;
+			};
+		}
+	</script>
+
+</body>
+</html>
