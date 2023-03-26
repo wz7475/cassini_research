@@ -43,15 +43,17 @@ body {
     }
 
     .startpoint_div,
-    .endpoint_div{
-    margin-right: 20px;
-    text-align: center;
-    background-color: rgba(235, 232, 235, 0.9);
-    width: 250px;
+    .endpoint_div,
+    .type_vehicle_type_div{
+        margin-right: 20px;
+        text-align: center;
+        background-color: rgba(235, 232, 235, 0.9);
+        width: 250px;
+        height: 250px;
     }
 
-    .type_vehicle_type_div{
-        float: right;
+    .submit_and_date_div{
+        float: left;
         text-align: center;
         background-color: rgba(235, 232, 235, 0.9);
         width: 250px;
@@ -103,19 +105,29 @@ body {
     }
 
     button {
-    padding: 80px 80px;
-    background-color: #3e8e41;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-left: 20px;
-    font-size: 25px;
+        padding: 20px 40px;
+        background-color: #3e8e41;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 25px;
+        margin-top: 20px;
     }
 
     button:hover {
     background-color:  #72d375;
+    }
+
+    .date_input{
+        width: 90px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        text-align: center;
     }
 
     /* Responsive styles */

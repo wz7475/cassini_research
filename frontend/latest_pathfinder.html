@@ -31,9 +31,15 @@
                 <h2>Vehicle Type</h2>
                 <input class="vehicle_type" type="text" id="vehicle_type" placeholder="Enter vehicle name">
             </div>
-            <div class="submit">
-                <button onclick="downloadAndDisplayImage()">Create path</button>
-            </div>
+			<div class="submit_and_date_div">
+				<div class="date_div">
+					<h2>Prediction date</h2>
+					<input class="date_input" type="date" id="date_input" placeholder="Enter date">
+				</div>
+				<div class="submit">
+					<button onclick="downloadAndDisplayImage()">Create path</button>
+				</div>
+			</div>
 		</div>
 		<div class="image">
 			<img id="image-preview" src="" />
